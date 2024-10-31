@@ -12,8 +12,16 @@ body {
     background-color: #f8f8f8;
 }
 
+:root {
+    --color-primary: #004E64;
+    --color-secondary: #00A5CF;
+    --color-accent: #9FFFCB;
+    --color-tertiary: #25A18E;
+    --color-quaternary: #7AE582;
+}
+
 .header {
-    background-color: #004E64;
+    background-color: var(--color-primary);
     padding: 10px 20px;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -44,7 +52,7 @@ body {
 
 .menu a:hover {
     background-color: #ffffff;
-    color: #004E64;
+    color: var(--color-primary);
 }
 
 .join-btn, .learn-btn {
@@ -60,18 +68,19 @@ body {
 
 .join-btn:hover, .learn-btn:hover {
     background-color: #ffffff;
-    color: #004E64;
+    color: var(--color-primary);
 }
 
 .hero {
     background-color: #e1f5fe;
     padding: 80px 20px;
     text-align: center;
+    position: relative;
 }
 
 .hero-content h1 {
     font-size: 48px;
-    color: #004E64;
+    color: var(--color-primary);
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -94,7 +103,7 @@ body {
     padding: 60px 20px;
     text-align: center;
     color: #333;
-    background-color: #00A5CF;
+    background-color: var(--color-secondary);
 }
 
 .adventure h4 {
@@ -147,7 +156,6 @@ body {
     object-fit: cover; 
 }
 
-
 .card:hover .image-box img {
     transform: scale(1.1);
 }
@@ -155,11 +163,11 @@ body {
 .cta-section {
     text-align: center;
     padding: 50px;
-    background-color: #004E64;
+    background-color: var(--color-primary);
 }
 
 .cta-button {
-    background-color: #00A5CF;
+    background-color: var(--color-secondary);
     color: #ffffff;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -170,7 +178,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #25A18E;
+    background-color: var(--color-tertiary);
 }
 
 .content1 {
@@ -198,7 +206,7 @@ body {
 }
 
 .packages {
-    background-color: #9FFFCB;
+    background-color: var(--color-accent);
     padding: 40px 20px;
     text-align: center;
 }
@@ -206,7 +214,7 @@ body {
 .packages h1 {
     font-size: 36px;
     margin-top: 10px;
-    color: #004E64; 
+    color: var(--color-primary); 
 }
 
 .packages p {
@@ -259,7 +267,7 @@ body {
 
 .package-item h3 {
     font-size: 18px;
-    color: #004E64;
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
@@ -279,7 +287,7 @@ body {
     border-radius: 10px;
 }
 .pricing-table {
-    background-color: #9FFFCB;
+    background-color: var(--color-accent);
     padding: 40px 20px;
     text-align: center;
     color: #333;
@@ -287,7 +295,7 @@ body {
 
 .pricing-table h2 {
     font-size: 36px;
-    color: #004E64;
+    color: var(--color-primary);
     margin-bottom: 20px;
 }
 
@@ -304,16 +312,16 @@ table, th, td {
 }
 
 th {
-    background-color: #004E64;
+    background-color: var(--color-primary);
     color: #fff;
 }
 
 tbody tr:nth-child(1) {
-    background-color: #9FFFCB; 
+    background-color: var(--color-accent); 
 }
 
 tbody tr:nth-child(2) {
-    background-color: #25A18E; 
+    background-color: var(--color-tertiary); 
 }
 
 tbody tr:nth-child(odd) {
@@ -344,7 +352,7 @@ td {
 
 .book-now {
     padding: 8px 16px;
-    background-color: #004E64;
+    background-color: var(--color-primary);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -361,11 +369,11 @@ td {
 .cta-section {
     text-align: center;
     padding: 20px;
-    background-color: #004E64;
+    background-color: var(--color-primary);
 }
 
 .cta-button {
-    background-color: #00A5CF;
+    background-color: var(--color-secondary);
     color: #ffffff;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -377,11 +385,11 @@ td {
 }
 
 .cta-button:hover {
-    background-color: #25A18E;
+    background-color: var(--color-tertiary);
 }
 
 .contact {
-    background-color: #25A18E;
+    background-color: var(--color-tertiary);
     padding: 40px 20px;
     text-align: center;
 }
@@ -400,7 +408,7 @@ td {
 }
 
 .footer {
-    background-color: #004E64;
+    background-color: var(--color-primary);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -639,7 +647,7 @@ td {
 .subscribe button {
     padding: 12px 25px;
     font-size: 1.1rem;
-    background-color: #004E64;
+    background-color: var(--color-primary);
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -669,7 +677,7 @@ td {
 }
 
 .footer {
-    background-color: #004E64;
+    background-color: var(--color-primary);
     padding: 40px 20px;
     color: #000000;
 }
@@ -702,8 +710,8 @@ td {
 }
 
 .hero-index {
-    background-image: url('images/heroimages.jpg');
     background-size: cover;
+    background-image: url('images/heroimages.jpg');
     color: #fff;
     padding: 100px 20px;
     text-align: center;
@@ -711,9 +719,9 @@ td {
 
 .hero-index {
     position: relative;
+    background-image: url('images/heroimages.jpg');
     width: 100%;
     height: 100%;
-    background-image: url('images/heroimages.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -747,7 +755,7 @@ td {
 }
 
 .contact-index {
-    background-color: #00A5CF;
+    background-color: var(--color-secondary);
     padding: 40px 20px;
     text-align: center;
 }
