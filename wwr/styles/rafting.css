@@ -10,16 +10,14 @@ body {
     line-height: 1.5;
     color: #333;
     background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
 }
 
 .header {
     background-color: #004E64;
     padding: 10px 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    justify-content: space-between;
 }
 
 .logo {
@@ -31,6 +29,7 @@ body {
 .menu {
     display: flex;
     gap: 20px;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -90,27 +89,6 @@ body {
     gap: 15px;
 }
 
-.join-btn, .learn-more-btn {
-    padding: 10px 20px;
-    border: 2px solid #000;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.join-btn {
-    background-color: #000;
-    color: #fff;
-}
-
-.learn-more-btn {
-    background-color: transparent;
-    color: #000;
-}
-
-.learn-more-btn:hover, .join-btn:hover {
-    background-color: #f0f0f0;
-}
 
 .adventure {
     padding: 60px 20px;
@@ -301,6 +279,7 @@ body {
     border-radius: 10px;
 }
 .pricing-table {
+    background-color: #9FFFCB;
     padding: 40px 20px;
     text-align: center;
     color: #333;
@@ -426,28 +405,39 @@ td {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     color: #ffffff;
+    flex-wrap: wrap;
 }
 
-.footer p {
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-content p {
     margin: 0;
 }
 
-.footer a {
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
     color: #ffffff;
     text-decoration: none;
     margin-left: 15px;
 }
 
-.footer a:hover {
+.footer-links a:hover {
     text-decoration: underline;
 }
 
 .social {
     display: flex;
     gap: 15px;
-    align-items: center;
 }
 
 .social img {
@@ -582,13 +572,18 @@ td {
 }
 
 @media (max-width: 768px) {
-    .employees-cards {
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-content {
         flex-direction: column;
         align-items: center;
-    }
-
-    .employee-profile {
-        max-width: 90%;
+        text-align: center;
     }
 }
 
